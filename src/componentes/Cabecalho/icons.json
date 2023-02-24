@@ -1,0 +1,28 @@
+[
+    {
+        "id": 1,
+        "path": "/assets/icones/sino.svg",
+        "nome": "Alerta"
+    },
+    {
+        "id": 2,
+        "path": "/assets/icones/olho.svg",
+        "nome": "Modo discreto"
+    },
+    {
+        "id": 3,
+        "path": "/assets/icones/interrogatorio.svg",
+        "nome": "Ajuda"
+    },
+    {
+        "id": 4,
+        "path": "/assets/icones/trancar.svg",
+        "nome": "Bloquear"
+    },
+    {
+        "id": 5,
+        "path": "/assets/icones/engrenagem.svg",
+        "nome": "Configurações"
+    }
+    
+]

@@ -1,0 +1,29 @@
+@import "styles/variaveis";
+
+.carteira {
+    display: flex;
+    flex-direction: column;
+    background-color: $cinza-escuro4;
+    padding-left: 20px;
+    height: 96%;
+
+    h1 {
+        font-size: 1.75rem;
+        font-weight: 700;
+        margin-bottom: 30px;
+    }
+
+    &__cards {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 15px;
+        margin-top: 15px;
+        padding-right: 20px;
+        height: 100%;
+        overflow-x: hidden;
+
+        
+    }
+}

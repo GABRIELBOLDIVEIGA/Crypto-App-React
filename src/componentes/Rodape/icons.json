@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "path": "/assets/icones/linkedin.svg",
+    "texto": "Linkedin",
+    "href": "https://www.linkedin.com/in/gabriel-boldi-278891247/"
+  },
+  {
+    "id": 2,
+    "path": "/assets/icones/github.svg",
+    "texto": "Github",
+    "href": "https://github.com/GABRIELBOLDIVEIGA"
+  }
+]
