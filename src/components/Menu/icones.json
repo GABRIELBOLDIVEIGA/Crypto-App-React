@@ -1,15 +1,16 @@
 [
   {
     "id": 1,
-    "path": "/assets/icones/alinhamento-do-grafico-portifolio.svg",
-    "texto": "Portifotio",
-    "route": "/portifolio"
-  },
-  {
-    "id": 2,
     "path": "/assets/icones/grafico-histograma-mercado.svg",
     "texto": "Mercado",
     "route": "/mercado"
+    
+  },
+  {
+    "id": 2,
+    "path": "/assets/icones/alinhamento-do-grafico-portifolio.svg",
+    "texto": "Portifotio",
+    "route": "/portifolio"
   },
   {
     "id": 3,
@@ -33,12 +34,18 @@
     "id": 6,
     "path": "/assets/icones/download.svg",
     "texto": "Receber",
-    "route": "/download"
+    "route": "/receber"
   },
   {
     "id": 7,
     "path": "/assets/icones/intercambio.svg",
     "texto": "Swap",
-    "route": "/intercambio"
+    "route": "/swap"
+  },
+  {
+    "id": 8,
+    "path": "/assets/icones/news.svg",
+    "texto": "News",
+    "route": "/news"
   }
 ]

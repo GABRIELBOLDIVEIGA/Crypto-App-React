@@ -1,7 +1,7 @@
 import { Outlet } from "react-router-dom";
 import styles from "./PaginaPrincipal.module.scss";
-import Cabecalho from "componentes/Cabecalho/index";
-import Menu from "componentes/Menu/index";
+import Cabecalho from "components/Cabecalho/index";
+import Menu from "components/Menu/index";
 
 export default function PaginaPrincipal() {
     return (
