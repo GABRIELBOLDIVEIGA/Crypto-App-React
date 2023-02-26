@@ -6,7 +6,7 @@ export default function Mercado() {
     const [moedas, setMoedas] = useState([]);
 
     useEffect(() => {
-        fetch("https://api.coinstats.app/public/v1/coins?skip=0&limit=100&currency=USD")
+        fetch("https://api.coinstats.app/public/v1/coins?skip=0&limit=30&currency=USD")
             .then((resp) => resp.json())
             .then((dados) => {
                 setMoedas(dados.coins);

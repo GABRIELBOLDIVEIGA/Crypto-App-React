@@ -1,11 +1,11 @@
 {
   "scss.lint.unknownAtRules": "ignore",
   "workbench.colorCustomizations": {
-    "commandCenter.border": "#e7e7e799",
-    "titleBar.activeBackground": "#333333",
-    "titleBar.activeForeground": "#e7e7e7",
-    "titleBar.inactiveBackground": "#33333399",
-    "titleBar.inactiveForeground": "#e7e7e799"
+    "commandCenter.border": "#1e1e1e99",
+    "titleBar.activeBackground": "#f2d388",
+    "titleBar.activeForeground": "#1e1e1e",
+    "titleBar.inactiveBackground": "#f2d38899",
+    "titleBar.inactiveForeground": "#1e1e1e99"
   },
-  "peacock.color": "#333333",
+  "peacock.color": "#F2D388",
 }

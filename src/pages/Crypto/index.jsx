@@ -7,14 +7,14 @@ export default function Crypto() {
     const [moeda, setMoeda] = useState();
     var local = useLocation();
 
-    console.log(local.pathname);
+    // console.log(local);
 
     useEffect(() => {
         fetch(`https://api.coinstats.app/public/v1/coins${local.pathname}?currency=USD`)
             .then((resp) => resp.json())
             .then((dados) => {
                 setMoeda(dados.coin);
-                console.log(dados.coin);
+                // console.log(dados.coin);
             })
             
     }, []);

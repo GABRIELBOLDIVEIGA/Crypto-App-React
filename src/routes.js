@@ -17,7 +17,8 @@ export default function AppRoutes() {
         <BrowserRouter>
             <Routes>
                 <Route path="/" element={<PaginaPrincipal />}>
-                    <Route path="/Mercado" element={<Mercado />}></Route>
+                    <Route path="/mercado" element={<Mercado />}></Route>
+
                     <Route path=":id" element={<Crypto />}></Route>
                     <Route path="/portifolio" element={<Portifolio />}></Route>
                     <Route path="/carteira" element={<Carteira />}></Route>
