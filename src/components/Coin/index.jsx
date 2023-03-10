@@ -5,7 +5,10 @@ import { useEffect, useState } from "react";
 import getHistoricalPrice from "components/Coin/getHistoricalPrice.js";
 import { ScriptableContext } from "react-chartjs-2";
 
+
 export default function Coin(moeda) {
+   
+   
     const [historicoPreco, setHistoricoPreco] = useState([]);
 
     useEffect(() => {
@@ -24,7 +27,7 @@ export default function Coin(moeda) {
                 data: historicoPreco.map((data) => data.preco),
 
                 fill: true,
-                backgroundColor: (context: ScriptableContext<"line">) => {
+                backgroundColor: (context:  ScriptableContext<"line">) => {
                     const ctx = context.chart.ctx;
                     const gradient = ctx.createLinearGradient(0, 0, 0, 400);
                     return gradient;
@@ -37,26 +40,29 @@ export default function Coin(moeda) {
     };
 
     return (
-        <Link to={`/${moeda.id}`} key={moeda.id} className={styles.moeda} token={moeda}>
-            <div className={styles.containerToken}>
-                <p>{moeda.rank}</p>
-                <img className={styles.moeda__icone} src={moeda.icon} alt={moeda.name} />
-                <div>
-                    <p>{moeda.name}</p>
-                    <p>{moeda.symbol}</p>
+        <div className={styles.item}>
+            
+            <Link to={`/${moeda.id}`} className={styles.moeda} key={moeda.id} token={moeda}>
+                <div className={styles.containerToken}>
+                    <p>{moeda.rank}</p>
+                    <img className={styles.moeda__icone} src={moeda.icon} alt={moeda.name} />
+                    <div>
+                        <p>{moeda.name}</p>
+                        <p>{moeda.symbol}</p>
+                    </div>
                 </div>
-            </div>
 
-            <div className={styles.containerValores}>
-                <p className={styles.containerValores__price}>$ {Number(moeda.price).toFixed(2)}</p>
-                <p className={styles.containerValores__change} style={Number(moeda.priceChange1w) < 0 ? { color: "#b9283d" } : { color: "#66be54" }}>
-                    {moeda.priceChange1w}%
-                </p>
-            </div>
+                <div className={styles.containerValores}>
+                    <p className={styles.containerValores__price}>$ {Number(moeda.price).toFixed(2)}</p>
+                    <p className={styles.containerValores__change} style={Number(moeda.priceChange1w) < 0 ? { color: "#b9283d" } : { color: "#66be54" }}>
+                        {moeda.priceChange1w}%
+                    </p>
+                </div>
 
-            <div className={styles.moeda__grafico}>
-                <LineChart chartData={data} />
-            </div>
-        </Link>
+                <div className={styles.moeda__grafico}>
+                    <LineChart chartData={data} />
+                </div>
+            </Link>
+        </div>
     );
 }

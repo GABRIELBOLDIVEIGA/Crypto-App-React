@@ -14,27 +14,15 @@
   },
   {
     "id": 3,
-    "path": "/assets/icones/carteira.svg",
-    "texto": "Carteira",
-    "route": "/carteira"
+    "path": "/assets/icones/coracao.svg",
+    "texto": "Favoritos",
+    "route": "/favoritos"
   },
   {
     "id": 4,
     "path": "/assets/icones/descubra.svg",
     "texto": "Descubra",
     "route": "/descubra"
-  },
-  {
-    "id": 5,
-    "path": "/assets/icones/envio.svg",
-    "texto": "Enviar",
-    "route": "/enviar"
-  },
-  {
-    "id": 6,
-    "path": "/assets/icones/download.svg",
-    "texto": "Receber",
-    "route": "/receber"
   },
   {
     "id": 7,

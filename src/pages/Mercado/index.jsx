@@ -10,7 +10,7 @@ export default function Mercado() {
             .then((resp) => resp.json())
             .then((dados) => {
                 setMoedas(dados.coins);
-                // console.log(dados.coins);
+                console.log(dados.coins);
             });
     }, []);
 
@@ -20,7 +20,7 @@ export default function Mercado() {
 
             <ul>
                 {moedas.map((moeda) => {
-                    return <Coin key={moeda.id} {...moeda}></Coin>;
+                    return <Coin key={moeda.id} id={moeda.id} {...moeda}></Coin>;
                 })}
             </ul>
         </div>

@@ -1,5 +1,18 @@
 @import "styles/variaveis";
 
+.item{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    // border: 1px solid red;
+
+    button {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+    }
+}
+
 .mercado {
     padding: 0 15px;
     height: 96%;
@@ -23,6 +36,7 @@
     padding-top: 10px;
     padding-bottom: 10px;
     color: $tipo-branco4;
+    width: 100%;
 
     // border: 1px solid goldenrod;
 

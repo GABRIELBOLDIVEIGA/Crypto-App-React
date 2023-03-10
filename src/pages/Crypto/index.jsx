@@ -2,21 +2,26 @@ import styles from "./Crypto.module.scss";
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import LoadingSpinner from "components/LoadingSpinner";
+import Coin from "components/Coin";
 
-export default function Crypto() {
+export default function Crypto(props) {
     const [moeda, setMoeda] = useState();
-    var local = useLocation();
-
-    // console.log(local);
+    const local = useLocation();
 
     useEffect(() => {
-        fetch(`https://api.coinstats.app/public/v1/coins${local.pathname}?currency=USD`)
+        const regex = /\/([^\/]*)$/;
+        const match = local.pathname.match(regex);
+
+        if (match) {
+            var id = match[1];
+        }
+
+        fetch(`https://api.coinstats.app/public/v1/coins/${id}?currency=USD`)
             .then((resp) => resp.json())
             .then((dados) => {
                 setMoeda(dados.coin);
-                // console.log(dados.coin);
-            })
-            
+                console.log(dados.coin)
+            });
     }, []);
 
     if (!moeda) {
@@ -30,8 +35,9 @@ export default function Crypto() {
 
     return (
         <section>
-            <h1>CRYPTO</h1>
-            <h2>moeda --- {moeda.id}</h2>
+            <h1>Detalhes sobre {moeda.id}</h1>
+            
+            <Coin {...moeda}/>
         </section>
     );
 }
