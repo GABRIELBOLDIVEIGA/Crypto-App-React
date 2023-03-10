@@ -8,7 +8,7 @@ export default function MoedasAPIProvider({ children }) {
     const [coins, setCoins] = useState([]);
 
     useEffect(() => {
-        fetch("https://api.coinstats.app/public/v1/coins?skip=0&limit=5&currency=USD")
+        fetch("https://api.coinstats.app/public/v1/coins?skip=0&limit=30&currency=USD")
             .then((resp) => resp.json())
             .then((dados) => {
                 setCoins(dados.coins);

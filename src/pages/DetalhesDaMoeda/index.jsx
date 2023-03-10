@@ -1,10 +1,10 @@
-import styles from "./Crypto.module.scss";
+import styles from "./DetalhesDaMoeda.module.scss";
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import LoadingSpinner from "components/LoadingSpinner";
 import Coin from "components/Coin";
 
-export default function Crypto(props) {
+export default function DetalhesDaMoeda() {
     const [moeda, setMoeda] = useState();
     const local = useLocation();
 

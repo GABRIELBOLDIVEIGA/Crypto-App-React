@@ -1,15 +1,19 @@
 @import "styles/variaveis";
 
-.item{
+.item {
     display: flex;
     flex-direction: row;
     align-items: center;
+    border-bottom: 1px solid $cinza-claro4;
     // border: 1px solid red;
 
     button {
-        background-color: transparent;
         border: none;
-        cursor: pointer;
+        background-color: transparent;
+    }
+
+    &:hover {
+        background-color: $cinza-claro4;
     }
 }
 
@@ -18,7 +22,7 @@
     height: 96%;
     overflow-y: scroll;
     cursor: pointer;
-    
+
     // border: 3px dashed white;
 
     h1 {
@@ -32,7 +36,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-bottom: 1px solid $cinza-claro4;
+
     padding-top: 10px;
     padding-bottom: 10px;
     color: $tipo-branco4;
@@ -48,11 +52,8 @@
     &__grafico {
         width: 250px;
         height: 50px;
+        margin-right: 20px;
         // border: 1px solid red;
-    }
-
-    &:hover {
-        background-color: $cinza-claro4;
     }
 }
 
@@ -66,6 +67,10 @@
 
     img {
         margin: 0 25px;
+    }
+
+    &__nameSymbol {
+        line-height: 20px;
     }
 }
 

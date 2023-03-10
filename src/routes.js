@@ -3,7 +3,7 @@ import "./styles/estilosGlobais.scss";
 import PaginaPrincipal from "pages/PaginaPrincipal";
 import PaginaNaoEncontrada from "./pages/PaginaNaoEncontrada";
 import Mercado from "pages/Mercado";
-import Crypto from "pages/Crypto";
+import DetalhesDaMoeda from "pages/DetalhesDaMoeda";
 import Portifolio from "pages/Portifolio";
 import Descubra from "pages/Descubra/index";
 import Swap from "pages/Swap/index";
@@ -18,7 +18,7 @@ export default function AppRoutes() {
                     <Route path="/mercado" element={<Mercado />}></Route>
                     <Route path="/portifolio" element={<Portifolio />}></Route>
                     <Route path="/favoritos" element={<Favoritos />}></Route>
-                    <Route path=":id" element={<Crypto />}></Route>
+                    <Route path="/mercado/:id" element={<DetalhesDaMoeda />}></Route>
                     
                     <Route path="/descubra" element={<Descubra />}></Route>
                     

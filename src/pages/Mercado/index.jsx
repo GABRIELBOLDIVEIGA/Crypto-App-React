@@ -1,25 +1,17 @@
-import { useState, useEffect } from "react";
 import styles from "./Mercado.module.scss";
 import Coin from "components/Coin";
+import { useMoedasAPIContext } from "common/context/MoedasAPI";
 
 export default function Mercado() {
-    const [moedas, setMoedas] = useState([]);
-
-    useEffect(() => {
-        fetch("https://api.coinstats.app/public/v1/coins?skip=0&limit=30&currency=USD")
-            .then((resp) => resp.json())
-            .then((dados) => {
-                setMoedas(dados.coins);
-                console.log(dados.coins);
-            });
-    }, []);
+    const { coins } = useMoedasAPIContext();
+    
 
     return (
         <div className={styles.mercado}>
             <h1>Mercado</h1>
 
             <ul>
-                {moedas.map((moeda) => {
+                {coins.map((moeda) => {
                     return <Coin key={moeda.id} id={moeda.id} {...moeda}></Coin>;
                 })}
             </ul>

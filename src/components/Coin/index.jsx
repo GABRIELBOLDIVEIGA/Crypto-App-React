@@ -4,12 +4,13 @@ import LineChart from "components/LineChart";
 import { useEffect, useState } from "react";
 import getHistoricalPrice from "components/Coin/getHistoricalPrice.js";
 import { ScriptableContext } from "react-chartjs-2";
-
+import { AiOutlineHeart, AiTwotoneHeart } from "react-icons/ai";
+import { useFavoritoContext } from "common/context/Favorito";
 
 export default function Coin(moeda) {
-   
-   
     const [historicoPreco, setHistoricoPreco] = useState([]);
+    const { favorito, adicionarFavorito } = useFavoritoContext();
+    const ehFavorito = favorito.some((fav) => fav.id === moeda.id);
 
     useEffect(() => {
         fetch(`https://api.coinstats.app/public/v1/charts?period=1m&coinId=${moeda.id}`)
@@ -27,7 +28,7 @@ export default function Coin(moeda) {
                 data: historicoPreco.map((data) => data.preco),
 
                 fill: true,
-                backgroundColor: (context:  ScriptableContext<"line">) => {
+                backgroundColor: (context: ScriptableContext<"line">) => {
                     const ctx = context.chart.ctx;
                     const gradient = ctx.createLinearGradient(0, 0, 0, 400);
                     return gradient;
@@ -41,12 +42,17 @@ export default function Coin(moeda) {
 
     return (
         <div className={styles.item}>
-            
-            <Link to={`/${moeda.id}`} className={styles.moeda} key={moeda.id} token={moeda}>
+            <button 
+                onClick={() => adicionarFavorito(moeda)}
+            >
+                {!ehFavorito ? <AiOutlineHeart size={20} color="#8b80db" /> : <AiTwotoneHeart size={20} color="#8b80db" />}
+            </button>
+
+            <Link to={`/mercado/${moeda.id}`} className={styles.moeda} key={moeda.id}  >
                 <div className={styles.containerToken}>
-                    <p>{moeda.rank}</p>
+                    <p># {moeda.rank}</p>
                     <img className={styles.moeda__icone} src={moeda.icon} alt={moeda.name} />
-                    <div>
+                    <div className={styles.containerToken__nameSymbol}>
                         <p>{moeda.name}</p>
                         <p>{moeda.symbol}</p>
                     </div>
