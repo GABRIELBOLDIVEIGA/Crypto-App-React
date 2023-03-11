@@ -1,0 +1,13 @@
+@import "styles/variaveis";
+
+.paginaPrincipal {
+    display: flex;
+    background-color: $cinza-escuro4;
+    height: 100vh;
+    
+    &__container {
+        height: 100%;
+        width: 100%;
+        overflow-y: hidden;
+    }
+}

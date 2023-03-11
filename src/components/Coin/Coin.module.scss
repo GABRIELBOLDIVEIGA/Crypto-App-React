@@ -1,0 +1,94 @@
+@import "styles/variaveis";
+
+.item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-bottom: 1px solid $cinza-claro4;
+    // border: 1px solid red;
+
+    button {
+        border: none;
+        background-color: transparent;
+    }
+
+    &:hover {
+        background-color: $cinza-claro4;
+    }
+}
+
+.mercado {
+    padding: 0 15px;
+    height: 96%;
+    overflow-y: scroll;
+    cursor: pointer;
+
+    // border: 3px dashed white;
+
+    h1 {
+        font-size: 1.75rem;
+        font-weight: 700;
+        margin-bottom: 30px;
+    }
+}
+
+.moeda {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: $tipo-branco4;
+    width: 100%;
+
+    // border: 1px solid goldenrod;
+
+    &__icone {
+        width: 25px;
+        border-radius: 999px;
+    }
+
+    &__grafico {
+        width: 250px;
+        height: 50px;
+        margin-right: 20px;
+        // border: 1px solid red;
+    }
+}
+
+.containerToken {
+    display: flex;
+    align-items: center;
+    width: 15%;
+    margin-left: 15px;
+
+    // border: 3px solid white;
+
+    img {
+        margin: 0 25px;
+    }
+
+    &__nameSymbol {
+        line-height: 20px;
+    }
+}
+
+.containerValores {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 30%;
+    // border: 1px solid greenyellow;
+
+    &__price {
+        width: 100px;
+        // border: 1px solid red;
+    }
+
+    &__change {
+        // border: 1px solid blueviolet;
+        width: 100px;
+    }
+}
