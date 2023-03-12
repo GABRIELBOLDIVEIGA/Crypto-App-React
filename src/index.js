@@ -5,4 +5,8 @@ import "./assets/fonts/GandhiSans-Bold.otf";
 import AppRoutes from "./routes";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<AppRoutes />);
+root.render(
+    <React.StrictMode>
+        <AppRoutes />
+    </React.StrictMode>
+);

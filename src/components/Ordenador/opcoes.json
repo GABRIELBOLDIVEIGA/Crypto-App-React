@@ -1,0 +1,23 @@
+[
+    
+    {
+        "nome": "Rank",
+        "value": "rank"
+    },
+    {
+        "nome": "Maior Ganho",
+        "value": "maior_ganho"
+    },
+    {
+        "nome": "Maior Perda",
+        "value": "maior_perda"
+    },
+    {
+        "nome": "Maior Preço",
+        "value": "preco_mais_caro"
+    },
+    {
+        "nome": "Menor Preço",
+        "value": "preco_mais_barato"
+    }
+]

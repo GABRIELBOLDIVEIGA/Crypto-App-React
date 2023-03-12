@@ -1,11 +1,12 @@
 @import "styles/variaveis";
 
 .mercado {
+    display: flex;
+    flex-direction: column;
     padding: 0 15px;
     height: 96%;
     overflow-y: scroll;
     overflow-x: hidden;
-   
 
     // border: 3px dashed white;
 
@@ -14,7 +15,21 @@
         font-weight: 700;
         margin-bottom: 30px;
     }
+
+    &__container {
+        width: 80%;
+        // border: 1px solid red;
+        align-self: center;
+    }
+
+    
 }
+
+.mercado::-webkit-scrollbar {
+    display: none;
+    }
+
+
 
 .moeda {
     display: flex;

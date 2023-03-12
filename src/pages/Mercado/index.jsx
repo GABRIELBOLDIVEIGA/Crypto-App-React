@@ -1,20 +1,24 @@
 import styles from "./Mercado.module.scss";
-import Coin from "components/Coin";
-import { useMoedasAPIContext } from "common/context/MoedasAPI";
+import Buscador from "components/Buscador";
+import Ordenador from "components/Ordenador";
+import { useState } from "react";
+import Itens from "./Itens";
 
 export default function Mercado() {
-    const { coins } = useMoedasAPIContext();
-    
+    const [busca, setBusca] = useState("");
+    const [ordenador, setOrdenador] = useState("");
+
+    console.log(busca);
+    console.log(ordenador);
 
     return (
         <div className={styles.mercado}>
             <h1>Mercado</h1>
-
-            <ul>
-                {coins.map((moeda) => {
-                    return <Coin key={moeda.id} id={moeda.id} {...moeda}></Coin>;
-                })}
-            </ul>
+            <div className={styles.mercado__container}>
+                <Buscador busca={busca} setBusca={setBusca} />
+                <Ordenador ordenador={ordenador} setOrdenador={setOrdenador} />
+                <Itens busca={busca} ordenador={ordenador} />
+            </div>
         </div>
     );
 }
