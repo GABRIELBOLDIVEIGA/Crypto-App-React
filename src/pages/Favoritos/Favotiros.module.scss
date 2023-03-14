@@ -1,0 +1,45 @@
+@import "styles/variaveis";
+
+.favorito {
+  display: flex;
+  flex-direction: column;
+  padding: 0 15px;
+  height: 96%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+
+  h1 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+  }
+
+  &__filtros {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    // border: 1px solid red;
+  }
+}
+
+.favorito::-webkit-scrollbar {
+  display: none;
+}
+
+.vazio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 50px;
+
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 180px;
+    text-decoration: none;
+    color: $tipo-branco4;
+  }
+}

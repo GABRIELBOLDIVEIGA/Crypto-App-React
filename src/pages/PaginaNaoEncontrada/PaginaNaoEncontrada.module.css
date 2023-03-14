@@ -1,0 +1,10 @@
+.page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 95.7%;
+
+    /* border: 1px solid white; */
+    /* background-color: red; */
+}

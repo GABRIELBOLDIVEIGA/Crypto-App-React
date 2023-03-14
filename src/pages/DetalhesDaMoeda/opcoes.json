@@ -1,0 +1,23 @@
+[
+    
+    {
+        "nome": "1y",
+        "value": "1y"
+    },
+    {
+        "nome": "90d",
+        "value": "3m"
+    },
+    {
+        "nome": "30d",
+        "value": "1m"
+    },
+    {
+        "nome": "7d",
+        "value": "1w"
+    },
+    {
+        "nome": "24h",
+        "value": "24h"
+    }
+]

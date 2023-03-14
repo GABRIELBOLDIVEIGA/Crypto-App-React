@@ -1,0 +1,88 @@
+@import "styles/variaveis";
+
+.mercado {
+  display: flex;
+  flex-direction: column;
+  padding: 0 15px;
+  height: 96%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+
+  // border: 3px dashed white;
+
+  h1 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+  }
+
+  &__filtros {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    // border: 1px solid red;
+  }
+}
+
+.mercado::-webkit-scrollbar {
+  display: none;
+}
+
+.moeda {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid $cinza-claro4;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  cursor: pointer;
+
+  // border: 1px solid goldenrod;
+
+  &__icone {
+    width: 25px;
+    border-radius: 999px;
+  }
+
+  &__grafico {
+    width: 200px;
+    height: 50px;
+    // border: 1px solid red;
+  }
+
+  &:hover {
+    background-color: $cinza-claro4;
+  }
+}
+
+.containerToken {
+  display: flex;
+  align-items: center;
+  width: 15%;
+  margin-left: 15px;
+
+  // border: 3px solid white;
+
+  img {
+    margin: 0 25px;
+  }
+}
+
+.containerValores {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 30%;
+  // border: 1px solid greenyellow;
+
+  &__price {
+    width: 100px;
+    // border: 1px solid red;
+  }
+
+  &__change {
+    // border: 1px solid blueviolet;
+    width: 100px;
+  }
+}
