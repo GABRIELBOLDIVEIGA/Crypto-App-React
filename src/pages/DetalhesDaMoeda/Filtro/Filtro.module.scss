@@ -1,0 +1,28 @@
+@import "styles/variaveis.scss";
+
+.filtros {
+    border: 1px solid $tipo-branco4;
+    border-radius: 999px;
+    padding: 5px;
+    min-width: 250px;
+    
+    
+    &__filtro {
+        border: none;
+        background-color: transparent;
+        color: $tipo-branco4;
+        font-size: .85rem;
+        padding: 10px 15px;
+        font-weight: 600;
+        
+        &--ativo {
+            border-radius: 999px;
+            padding: 10px 15px;
+            background-color: $tipo-branco4;
+            color: black;
+        }
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}

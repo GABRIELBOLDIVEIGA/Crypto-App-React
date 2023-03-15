@@ -1,0 +1,24 @@
+@import "styles/variaveis.scss";
+
+.artigo {
+  color: $tipo-branco4;
+  width: 20%;
+  height: 250px;
+
+ 
+
+//   border: 1px solid red;
+
+  h1 {
+    font-size: 1.3rem;
+    font-weight: 600;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  a {
+    text-decoration: none;
+  }
+}

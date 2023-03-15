@@ -1,0 +1,84 @@
+@import "styles/variaveis.scss";
+
+.info {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  margin-top: 20px;
+
+  h2 {
+    font-size: 3rem;
+  }
+
+  p {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.5rem;
+  }
+
+  &__priceStats {
+    width: 50%;
+    height: 350px;
+    border-radius: 10px;
+    background-color: $cinza-claro4;
+    padding: 25px 25px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    div {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+      padding-top: 40px;
+    }
+  }
+
+  &__mark_supply {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+    width: 50%;
+
+    &__marketCapStats {
+      border-radius: 10px;
+      background-color: $cinza-claro4;
+      height: 50%;
+      padding: 25px 25px;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      div {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+        padding-top: 20px;
+      }
+    }
+
+    &__SupplyStats {
+      border-radius: 10px;
+      background-color: $cinza-claro4;
+      height: 50%;
+      padding: 25px 25px;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      div {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+        padding-top: 20px;
+      }
+    }
+  }
+}

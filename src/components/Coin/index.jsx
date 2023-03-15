@@ -2,12 +2,11 @@ import styles from "./Coin.module.scss";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import getHistoricalPrice from "common/functions/getHistoricalPrice.js";
-import { ScriptableContext } from "react-chartjs-2";
+// import { ScriptableContext } from "react-chartjs-2";
 import { AiOutlineStar, AiFillStar } from "react-icons/ai";
 import { RxTriangleDown, RxTriangleUp } from "react-icons/rx";
 import { useFavoritoContext } from "common/context/Favorito";
-import { Line } from "react-chartjs-2";
-import LineChart from './../LineChart/index';
+import LineChart from './LineChat/index';
 
 export default function Coin(moeda) {
     const [historicoPreco, setHistoricoPreco] = useState([]);
@@ -28,13 +27,7 @@ export default function Coin(moeda) {
             {
                 label: "Titulo aqui",
                 data: historicoPreco.map((data) => data.preco),
-
-                fill: true,
-                backgroundColor: (context: ScriptableContext<"line">) => {
-                    const ctx = context.chart.ctx;
-                    const gradient = ctx.createLinearGradient(0, 0, 0, 400);
-                    return gradient;
-                },
+                fill: false,
                 borderColor: "#c4c9cc",
                 borderWidth: 1.5,
                 pointRadius: 0,
