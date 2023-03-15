@@ -12,7 +12,7 @@ export default function MoedasAPIProvider({ children }) {
             .then((resp) => resp.json())
             .then((dados) => {
                 setCoins(dados.coins);
-                console.log(dados.coins);
+                // console.log(dados.coins);
             });
     }, []);
     // -------------------------------------------------
