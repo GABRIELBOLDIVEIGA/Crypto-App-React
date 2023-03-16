@@ -5,34 +5,22 @@
     overflow-x: hidden;
     height: 96vh;
     width: 100%;
+    padding: 0 15px 100px 15px;
+
+    h1{
+        font-size: 1.75rem;
+        font-weight: 700;
+        margin-bottom: 30px;
+    }
 
     &__container {
-        // max-width: 400px;
-        // display: flex;
-        
-
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        gap: 50px;
     }
 }
 
-.artigo{
-    color: $tipo-branco4;
-    width: 20%;
-   
-    height: 250px;
-
-    // border: 1px solid red;
-
-    h1 {
-        font-size: 1.3rem;
-        font-weight: 600;
-    }
-
-    img {
-        width: 100%;
-    }
-
-    a {
-        text-decoration: none;
-        
-    }
+.news::-webkit-scrollbar {
+    display: none;
 }
