@@ -6,7 +6,8 @@ import getHistoricalPrice from "common/functions/getHistoricalPrice.js";
 import { AiOutlineStar, AiFillStar } from "react-icons/ai";
 import { RxTriangleDown, RxTriangleUp } from "react-icons/rx";
 import { useFavoritoContext } from "common/context/Favorito";
-import LineChart from './LineChat/index';
+import LineChart from "./LineChat/index";
+import styled, { css } from "styled-components";
 
 export default function Coin(moeda) {
     const [historicoPreco, setHistoricoPreco] = useState([]);
@@ -74,6 +75,18 @@ export default function Coin(moeda) {
         },
     };
 
+    const P = styled.p`
+        display: flex;
+        width: 100px;
+        color: #66be54;
+
+        ${(props) =>
+            props.variacao < 0 &&
+            css`
+                color: #b9283d;
+            `}
+    `;
+
     return (
         <div className={styles.item}>
             <button onClick={() => adicionarFavorito(moeda)}>{!ehFavorito ? <AiOutlineStar size={20} color="#c6cfd2" /> : <AiFillStar size={20} color="#8b80db" />}</button>
@@ -88,16 +101,27 @@ export default function Coin(moeda) {
                     </div>
                 </div>
 
+                <p className={styles.moeda__price}>$ {moeda.price.toFixed(2)}</p>
+
                 <div className={styles.containerValores}>
-                    <p className={styles.containerValores__price}>$ {Number(moeda.price).toFixed(2)}</p>
-                    <p className={styles.containerValores__change} style={Number(moeda.priceChange1w) < 0 ? { color: "#b9283d" } : { color: "#66be54" }}>
-                        {Number(moeda.priceChange1w) < 0 ? <RxTriangleDown /> : <RxTriangleUp />}
+                    <P variacao={moeda.priceChange1h}>
+                        {moeda.priceChange1h < 0 ? <RxTriangleDown /> : <RxTriangleUp />}
+                        {moeda.priceChange1h}%
+                    </P>
+
+                    <P variacao={moeda.priceChange1d}>
+                        {moeda.priceChange1d < 0 ? <RxTriangleDown /> : <RxTriangleUp />}
+                        {moeda.priceChange1d}%
+                    </P>
+
+                    <P variacao={moeda.priceChange1w}>
+                        {moeda.priceChange1w < 0 ? <RxTriangleDown /> : <RxTriangleUp />}
                         {moeda.priceChange1w}%
-                    </p>
+                    </P>
                 </div>
 
                 <div className={styles.moeda__grafico}>
-                    <LineChart chartData={data}  chartOptions={options}/>
+                    <LineChart chartData={data} chartOptions={options} />
                 </div>
             </Link>
         </div>

@@ -5,7 +5,6 @@
     flex-direction: row;
     align-items: center;
     border-bottom: 1px solid $cinza-claro4;
-    // border: 1px solid red;
 
     button {
         border: none;
@@ -23,8 +22,6 @@
     overflow-y: scroll;
     cursor: pointer;
 
-    // border: 3px dashed white;
-
     h1 {
         font-size: 1.75rem;
         font-weight: 700;
@@ -36,13 +33,10 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-
     padding-top: 10px;
     padding-bottom: 10px;
     color: $tipo-branco4;
     width: 100%;
-
-    // border: 1px solid goldenrod;
 
     &__icone {
         width: 25px;
@@ -53,7 +47,10 @@
         width: 250px;
         height: 50px;
         margin-right: 20px;
-        // border: 1px solid red;
+    }
+
+    &__price {
+        width: 100px;
     }
 }
 
@@ -62,8 +59,6 @@
     align-items: center;
     width: 15%;
     margin-left: 15px;
-
-    // border: 3px solid white;
 
     img {
         margin: 0 25px;
@@ -76,21 +71,5 @@
 
 .containerValores {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-
     width: 30%;
-    // border: 1px solid greenyellow;
-
-    &__price {
-        width: 100px;
-        // border: 1px solid red;
-    }
-
-    &__change {
-        display: flex;
-        gap: 5px;
-        // border: 1px solid blueviolet;
-        width: 100px;
-    }
 }
