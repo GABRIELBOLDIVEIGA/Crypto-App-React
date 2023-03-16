@@ -40,6 +40,7 @@ export default function Favoritos() {
         const novaLista = favorito.filter((item) => testaBusca(item.name) || testaBusca(item.symbol));
 
         setLista(ordenar(novaLista));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [busca, ordenador]);
 
     return favorito.length !== 0 ? (

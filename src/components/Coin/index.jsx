@@ -20,6 +20,7 @@ export default function Coin(moeda) {
             .then((dados) => {
                 setHistoricoPreco(getHistoricalPrice(dados.chart));
             });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     const data = {

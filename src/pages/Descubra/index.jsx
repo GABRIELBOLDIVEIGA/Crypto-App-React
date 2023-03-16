@@ -3,7 +3,6 @@ import { RxTriangleDown } from "react-icons/rx";
 import { RxTriangleUp } from "react-icons/rx";
 
 export default function Descubra() {
-  const valor = 1;
 
   const Button = styled.button`
     background: transparent;

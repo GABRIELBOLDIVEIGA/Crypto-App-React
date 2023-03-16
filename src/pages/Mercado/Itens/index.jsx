@@ -32,6 +32,7 @@ export default function Itens({ busca, ordenador }) {
         const novaLista = coins.filter((item) => testaBusca(item.name) || testaBusca(item.symbol));
 
         setLista(ordenar(novaLista));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [busca, ordenador]);
 
     return (
