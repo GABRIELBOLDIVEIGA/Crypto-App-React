@@ -1,0 +1,31 @@
+@import "styles/variaveis";
+
+.indicador {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 2px solid $cinza-claro4;
+    border-top: 2px solid $cinza-claro4;
+
+    &__rankName {
+        display: flex;
+        justify-content: space-between;
+        margin-left: 40px;
+        width: 145px;
+    }
+
+    &__preco {
+        transform: translateX(-65px);
+    }
+
+    &__tempo {
+        display: flex;
+        justify-content: space-between;
+        width: 220px;
+        transform: translateX(-130px);
+    }
+
+    &__grafico {
+        margin-right: 80px;
+    }
+}
