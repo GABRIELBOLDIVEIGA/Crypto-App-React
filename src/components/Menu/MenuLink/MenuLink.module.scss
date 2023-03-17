@@ -4,19 +4,19 @@
     display: flex;
     align-items: center;
     gap: 10px;
-
+    color: $tipo-branco4;
     font-size: 14px;
     line-height: 1.5rem;
-    color: $tipo-branco4;
-
     height: 35px;
-    margin-right: 10px;
+    margin-right: 25px;
     margin-top: 20px;
     padding-left: 10px;
+    padding-right: 10px;
     border-radius: 5px;
 
     &:hover{
         color: $roxo-claro4;
+        background-color: $cinza-claro4;
     }
 }
 

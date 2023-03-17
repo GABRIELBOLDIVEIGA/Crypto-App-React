@@ -3,19 +3,28 @@
 .menu {
     display: flex;
     flex-direction: column;
+    align-items: center;
     justify-content: space-between;
-    min-width: 225px;
-    background-color: $cinza-medio4;
-    // min-height: 100vh;
+    min-width: 80px;
     height: 100vh;
+    background-color: $cinza-medio4;
     color: $tipo-branco4;
-    // border: 1px solid yellow;
-    
+
+    &__icon {
+        align-self: flex-end;
+        transform: translateX(8px);
+        margin-top: 30px;
+        margin-bottom: 20px;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
 
     h5 {
-        padding-top: 60px;
+        margin-bottom: 20px;
         color: white;
-        font-size: 12px;
+        font-size: 1rem;
     }
 
     &__lista {
@@ -23,7 +32,10 @@
         flex-direction: column;
         padding: 0;
         height: 75%;
-        // width: 100%;
         margin-left: 20px;
+    }
+
+    .expandido {
+        width: 200px;
     }
 }
