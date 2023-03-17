@@ -1,34 +1,41 @@
 @import "styles/variaveis";
 
 .rodape {
+    display: flex;
+    flex-direction: column;
     width: 100%;
-    font-size: 14px;
-    line-height: 1.5rem;
-    padding-bottom: 20px;
+    font-size: 1.1rem;
+    padding-bottom: 40px;
 
-    div {
+    // transform: translateX(5px);
+    // border: 1px solid red;
+    
+
+    &__borda {
         border-bottom: 1px solid $cinza-claro4;
-        margin-bottom: 20px;
-        padding-left: 30px;
+        margin-bottom: 30px;
     }
 
-    &__item {
+    &__itens {
         display: flex;
-        align-items: center;
-        cursor: pointer;
-        height: 35px;
-        border-radius: 5px;
-        color: $tipo-branco4;
+        flex-direction: column;
+        gap: 20px;
         margin-left: 30px;
-        gap: 10px;
-
-        &:hover {
-            color: $roxo-claro4;
+        
+        &__item {
+            display: flex;
+            align-items: center;
+            width: max-content;
+            color: $tipo-branco4;
+            cursor: pointer;
+            
+            &:hover {
+                color: $roxo-claro4;
+            }
         }
     }
+}
 
-    img {
-        width: 20px;
-        height: 20px;
-    }
+.expandido {
+    gap: 10px;
 }

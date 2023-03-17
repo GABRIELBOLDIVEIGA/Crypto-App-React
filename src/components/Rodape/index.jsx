@@ -1,18 +1,32 @@
 import styles from "./Rodape.module.scss";
-import icons from "./icons.json";
+import classNames from "classnames";
+import { AiFillLinkedin, AiFillGithub } from "react-icons/ai";
 
 export default function Rodape({ expandido }) {
     return (
         <section className={styles.rodape}>
-            <div></div>
-            {icons.map((icon) => {
-                return (
-                    <a key={icon.id} className={styles.rodape__item} href={icon.href} target="_blank" rel="noreferrer">
-                        <img src={icon.path} alt="" />
-                        {expandido ? icon.texto : "" }
-                    </a>
-                );
-            })}
+            <div className={styles.rodape__borda}></div>
+
+            <div className={styles.rodape__itens}>
+                <a className={classNames({ 
+                        [styles.rodape__itens__item]: true, 
+                        [styles.expandido]: expandido 
+                    })} 
+                    href="https://www.linkedin.com/in/gabriel-boldi-278891247/" target="_blank" rel="noreferrer"
+                >
+                    <AiFillLinkedin size={20} />
+                    {expandido ? <p>Linkedin</p> : ""}
+                </a>
+
+                <a className={classNames({ 
+                        [styles.rodape__itens__item]: true, 
+                        [styles.expandido]: expandido 
+                    })} href="https://github.com/GABRIELBOLDIVEIGA" target="_blank" rel="noreferrer"
+                >
+                    <AiFillGithub size={20} />
+                    {expandido ? <p>Github</p> : ""}
+                </a>
+            </div>
         </section>
     );
 }
