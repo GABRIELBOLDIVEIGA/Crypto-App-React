@@ -2,19 +2,16 @@
 
 .paginaPrincipal {
     display: flex;
+    justify-content: space-between;
     background-color: $cinza-escuro4;
     height: 100vh;
-
-    // border: 1px solid gold;
     
     &__container {
         display: flex;
         flex-direction: column;
         height: 100%;
-        width: 80%;
+        width: 77%;
+        max-width: 77%;
         margin: 0 5%;
-        // overflow-y: hidden;
-
-        // border: 1px solid red;
     }
 }
