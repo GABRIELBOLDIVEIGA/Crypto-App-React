@@ -7,6 +7,6 @@
 Live Demo: https://crypto-app-six-sigma.vercel.app/mercado/bitcoin
 
 
-![mercado](https://user-images.githubusercontent.com/110861595/225618808-24da01d4-b31b-44c5-b305-a124eb249583.PNG)
-![Favoritos](https://user-images.githubusercontent.com/110861595/225618824-a5592e64-97d9-4bf4-9415-ddefc46a5d0e.PNG)
-![Detalhamento](https://user-images.githubusercontent.com/110861595/225618838-0decaa54-3885-4c5f-b3fc-9cbd3535d47f.PNG)
+![Mercado](https://user-images.githubusercontent.com/110861595/225921712-1a918b4e-09d9-41c3-a383-00bc99cf9c92.PNG)
+![Favoritos](https://user-images.githubusercontent.com/110861595/225921728-d7e8567a-032d-45eb-9b25-af15e34114b7.PNG)
+![Detalhe](https://user-images.githubusercontent.com/110861595/225921745-6750e53b-8b9b-41b6-b077-b2e3cf2231ca.PNG)
