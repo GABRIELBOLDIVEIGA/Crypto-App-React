@@ -1,31 +1,34 @@
 @import "styles/variaveis";
 
+.menuLink {
+    width: max-content;
+    display: flex;
+    flex-direction: column;
+    margin-left: 23px;
+}
+
 .link {
     display: flex;
     align-items: center;
-    gap: 10px;
     color: $tipo-branco4;
-    font-size: 14px;
-    line-height: 1.5rem;
-    height: 35px;
-    margin-right: 25px;
-    margin-top: 20px;
-    padding-left: 10px;
-    padding-right: 10px;
-    border-radius: 5px;
+    font-size: 1.25rem;
+    padding: 7px;
+    margin-bottom: 20px;
+    border-radius: 6px;
 
-    &:hover{
-        color: $roxo-claro4;
+    &:hover {
         background-color: $cinza-claro4;
+        color: $roxo-claro4;
     }
 }
 
 .linkDestacado {
-    color: $roxo-medio4;
     background-color: $cinza-claro4;
+    color: $roxo-claro4;
 }
 
-.img {
-    width: 15px;
-    height: 15px;
+.expandido {
+    gap: 10px;
+    padding-right: 50px;
+    margin-right: 24px;
 }
