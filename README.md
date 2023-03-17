@@ -4,7 +4,7 @@
 
 :construction: Projeto em construção :construction:
 
-Live Demo: https://crypto-app-six-sigma.vercel.app/favoritos
+Live Demo: https://crypto-app-six-sigma.vercel.app/mercado/bitcoin
 
 
 ![mercado](https://user-images.githubusercontent.com/110861595/225618808-24da01d4-b31b-44c5-b305-a124eb249583.PNG)
