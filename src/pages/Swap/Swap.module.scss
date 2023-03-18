@@ -1,0 +1,28 @@
+@import "styles/_variaveis.scss";
+
+.swap {
+    height: 100%;
+    border: 5px solid red;
+
+    &__conteudo {
+        display: flex;
+        justify-content: space-between;
+        
+        border: 3px dashed greenyellow;
+
+        &__saldo {
+            border: 3px dotted darkorange;
+        }
+    }
+
+    &__container {
+        width: 50%;
+        height: 400px;
+
+        border: 3px solid mediumseagreen;
+    }
+}
+
+.wrapper {
+    border: 1px solid blueviolet;
+}
