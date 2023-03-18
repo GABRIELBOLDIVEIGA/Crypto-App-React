@@ -4,7 +4,6 @@ export const MoedasAPIContext = createContext();
 MoedasAPIContext.displayName = "MoedasAPIContext";
 
 export default function MoedasAPIProvider({ children }) {
-    // -------------------------------------------------
     const [coins, setCoins] = useState([]);
 
     useEffect(() => {
@@ -15,7 +14,6 @@ export default function MoedasAPIProvider({ children }) {
                 // console.log(dados.coins);
             });
     }, []);
-    // -------------------------------------------------
 
     return <MoedasAPIContext.Provider value={{ coins }}>{children}</MoedasAPIContext.Provider>;
 }
