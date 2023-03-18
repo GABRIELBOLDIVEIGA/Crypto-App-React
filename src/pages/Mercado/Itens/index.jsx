@@ -38,7 +38,7 @@ export default function Itens({ busca, ordenador }) {
     return (
         <ul>
             {lista.map((moeda) => {
-                return <Coin key={moeda.id} {...moeda} busca={busca} ordenador={ordenador} />;
+                return <Coin key={moeda.id} {...moeda} />;
             })}
         </ul>
     );
