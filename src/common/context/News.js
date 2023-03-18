@@ -11,7 +11,7 @@ export default function NewsProvider({ children }) {
       .then((response) => response.json())
       .then((dados) => {
         setNews(dados.news);
-        console.log(dados);
+        // console.log(dados);
       });
   }, []);
 
