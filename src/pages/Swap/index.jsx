@@ -5,8 +5,8 @@ export default function Swap() {
         <section className={styles.swap}>
             <h1>Swap</h1>
 
-            <div className={styles.swap__conteudo}>
-                <div className={styles.swap__container}>
+            <div className={styles.conteudo}>
+                <div className={styles.conteudo__swap}>
                     <div className={styles.wrapper}>
                         <div>
                             <select>
@@ -39,7 +39,7 @@ export default function Swap() {
                     <button>Confirma</button>
                 </div>
 
-                <div className={styles.swap__conteudo__saldo}>
+                <div className={styles.conteudo__saldo}>
                     <h2>Saldo</h2>
                     <ul>
                         <li>
